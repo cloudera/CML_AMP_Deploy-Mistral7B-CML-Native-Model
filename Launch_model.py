@@ -6,6 +6,8 @@ import torch
 import cml.metrics_v1 as metrics
 import cml.models_v1 as models
 
+hf_access_token = os.environ.get('HF_ACCESS_TOKEN')
+
 # Quantization
 # Here quantization is setup to use "Normal Float 4" data type for weights. 
 # This way each weight in the model will take up 4 bits of memory. 
@@ -24,6 +26,7 @@ model = AutoModelForCausalLM.from_pretrained(
     model_name, 
     quantization_config=bnb_config,
     device_map='auto',
+    token=hf_access_token
 )
 
 # Args helper
@@ -38,7 +41,7 @@ def opt_args_value(args, arg_name, default):
     return default
 
 # Define tokenizer parameters
-tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
+tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True, token=hf_access_token)
 tokenizer.pad_token = tokenizer.eos_token
 
 # Mamke the call to 

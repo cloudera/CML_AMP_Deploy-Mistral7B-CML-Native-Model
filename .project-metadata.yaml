@@ -5,6 +5,12 @@ date: "2024-1-20"
 specification_version: 1.0
 prototype_version: 1.0
 
+environment_variables:
+  HF_ACCESS_TOKEN:
+    default: ""
+    description: "Access Token to use Mistral 7B model"
+    required: true
+
 runtimes: 
   - editor: Workbench
     kernel: Python 3.9
