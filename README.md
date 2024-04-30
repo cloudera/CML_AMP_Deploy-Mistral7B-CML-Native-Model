@@ -1,6 +1,9 @@
 ### Deploy Mistral 7B as a model within CML
 This project walks through a deployment and hosting of a Large Languge Model (LLM) within CML. The project can be cloned into CML directly,  It can be launched as an Applied Machine Learning Prototype (AMP) as well. 
 
+### Model EULA Acceptance
+Navigate to https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2 and accept the terms of the model. Then save the HF key by navigating to your profile and clicking "Settings", then "Access Tokens" and copy the key to your clipboard.
+
 ### Site settings prerequisites
 1. Go to Site Administration > Settings > Ephemeral Storage Limit (in GB) and set to 20GB minimum.
 2. g4dn.4xlarge is the minimum recommended GPU type on AWS. It has 8 vCPUs and accounts for any overhead on top of 4 vCPUs that the model deployment needs.
