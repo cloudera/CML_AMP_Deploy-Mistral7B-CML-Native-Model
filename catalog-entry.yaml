@@ -8,11 +8,11 @@ entries:
     long_description: |
       This AMP deploys Mistral AI's Mistral 7B m model as a CML API endpoint. Requires a GPU node with 4 vCores and 16 GB memory minimum.
       Note the following site settings prerequisite: Go to Site Administration > Settings > Ephemeral Storage Limit (in GB) and ensure value is set to at least 20GB
-    image_path: "https://raw.githubusercontent.com/kevinbtalbert/CML_AMP_Deploy-Mistral7B-CML-Native-Model/main/images/catalog-entry.png"
+    image_path: "https://raw.githubusercontent.com/cloudera/CML_AMP_Deploy-Mistral7B-CML-Native-Model/main/images/catalog-entry.png"
     tags: 
       - Mistral 7B
       - LLM
       - Mistral AI
       - Model Deployment
-    git_url: "https://github.com/kevinbtalbert/CML_AMP_Deploy-Mistral7B-CML-Native-Model"
+    git_url: "https://github.com/cloudera/CML_AMP_Deploy-Mistral7B-CML-Native-Model"
     is_prototype: true
