@@ -32,3 +32,37 @@ Deploy the model by:
 - Wait until it is Deployed
 
 Test the Model.
+
+
+## Use Case Examples
+
+### Email Generator
+- With the model deployed and runnning, open a new session
+- In a running session, select the Python 'callBooth.py' and edit the model end point URL and API key.  These values can be found in the model testing UI on CML. 
+    ```
+        # API endpoint URL
+        endpoint = "https://YOUR MODEL ENDPOINT"
+        
+        #Access Key
+        Akey = 'paste-here'
+    ```
+- Once you have updated these values, just run the script. It will access the file located in /data/CSVExample.csv
+
+### Document Feasiblity Tester
+
+- With the model deployed and runnning, open a new session
+- In a running session, select the Python 'PDFRip.py' and edit the model end point URL and API key.  These values can be found in the model testing UI on CML. 
+    ```
+        # API endpoint URL
+        endpoint = "https://YOUR MODEL ENDPOINT"
+        
+        #Access Key
+        Akey = 'paste-here'
+    ```
+- Once you have updated these values, just run the script. It will access the file located in /data/DPO.xml
+- To work with a new PDF, using the tool GROBRID to convert a PDF to XML, which can used online using this following link.  https://huggingface.co/spaces/kermitt2/grobid
+- This newly converted PDF document can be used after modifing the following code section:
+    ```
+        #Pass XML File and Return String
+        xml_string = read_xml_file('data/YOUR_NEW_DOC.xml')
+    ```
