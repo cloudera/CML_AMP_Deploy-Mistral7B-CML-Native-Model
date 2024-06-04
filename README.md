@@ -66,3 +66,6 @@ Test the Model.
         #Pass XML File and Return String
         xml_string = read_xml_file('data/YOUR_NEW_DOC.xml')
     ```
+
+
+Copyright (c) 2023 - 2024 - Cloudera, Inc. All rights reserved.
